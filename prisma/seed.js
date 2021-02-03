@@ -166,7 +166,7 @@ const prisma = require('../src/prismaClient');
           imageName: 'yoann.jpg',
         },
       ].map((elmt) => {
-        return prisma.create({ data: elmt });
+        return prisma.family.create({ data: elmt });
       })
     );
 
@@ -186,7 +186,6 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          password: null,
           latitude: 45.748112,
           longitude: 4.860201,
           imageName: 'versailles.jpg',
@@ -197,7 +196,6 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          password: null,
           latitude: 47.32487,
           longitude: 1.070301,
           imageName: 'chenonceau.jpg',
@@ -208,7 +206,6 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          password: null,
           latitude: 47.2596,
           longitude: 0.4666,
           imageName: 'azay-le-rideau.jpg',
@@ -219,7 +216,6 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          password: null,
           latitude: 47.616126,
           longitude: 1.517218,
           imageName: 'chambord.jpg',
@@ -230,13 +226,12 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          password: null,
           latitude: 47.407831702,
           longitude: 0.984829394,
           imageName: 'versailles.jpg',
         },
       ].map((elmt) => {
-        return prisma.admin.create({ data: { role: elmt } });
+        return prisma.realEstate.create({ data: elmt });
       })
     );
   } catch (error) {
