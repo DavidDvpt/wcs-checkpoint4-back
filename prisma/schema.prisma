@@ -15,7 +15,7 @@ generator client {
 //*******************************************
 model goldBook {
   id      Int    @id @default(autoincrement())
-  nom     String
+  name    String
   message String
 }
 
