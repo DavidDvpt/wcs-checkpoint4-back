@@ -188,7 +188,7 @@ const prisma = require('../src/prismaClient');
 
     // ****** admin ******
     await Promise.all(
-      ['Prospector', 'Commercial'].map((elmt) => {
+      ['Roi', 'Prospector', 'Commercial'].map((elmt) => {
         return prisma.admin.create({ data: { role: elmt } });
       })
     );
