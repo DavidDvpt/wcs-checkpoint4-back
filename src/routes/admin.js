@@ -50,9 +50,9 @@ router.post('/', async (req, res, next) => {
 });
 
 /**
- * POST /api/v1/admin/:id
+ * PUT /api/v1/admin/:id
  */
-router.post('/', async (req, res, next) => {
+router.put('/', async (req, res, next) => {
   const { id } = req.params;
   const { role } = req.body;
   try {
@@ -73,7 +73,7 @@ router.post('/', async (req, res, next) => {
 /**
  * DELETE /api/v1/admin/:id
  */
-router.post('/', async (req, res, next) => {
+router.delete('/', async (req, res, next) => {
   const { id } = req.params;
   try {
     const results = await prisma.admin.delete({
