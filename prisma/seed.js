@@ -13,7 +13,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'albin.jpg',
+          imageName: 'albin.jpeg',
         },
         {
           firstname: 'Alexandre',
@@ -23,7 +23,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'alexandre.jpg',
+          imageName: 'alexandre.jpeg',
         },
         {
           firstname: 'Anthony',
@@ -33,7 +33,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'anthony.jpg',
+          imageName: 'anthony.jpeg',
         },
         {
           firstname: 'David',
@@ -43,7 +43,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'david.jpg',
+          imageName: 'david.jpeg',
         },
         {
           firstname: 'Diane',
@@ -53,7 +53,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'diane.jpg',
+          imageName: 'diane.jpeg',
         },
         {
           firstname: 'Laura',
@@ -63,7 +63,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'laura.jpg',
+          imageName: 'laura.jpeg',
         },
         {
           firstname: 'Linida',
@@ -73,7 +73,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'linda.jpg',
+          imageName: 'linda.jpeg',
         },
         {
           firstname: 'Malo',
@@ -83,7 +83,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'malo.jpg',
+          imageName: 'malo.jpeg',
         },
         {
           firstname: 'Nelly',
@@ -93,7 +93,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'nelly.jpg',
+          imageName: 'nelly.jpeg',
         },
         {
           firstname: 'Raphael',
@@ -103,7 +103,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'raphael.jpg',
+          imageName: 'raphael.jpeg',
         },
         {
           firstname: 'Renaud',
@@ -113,7 +113,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'renaud.jpg',
+          imageName: 'renaud.jpeg',
         },
         {
           firstname: 'Romain',
@@ -123,7 +123,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'romain.jpg',
+          imageName: 'romain.jpeg',
         },
         {
           firstname: 'Samuel',
@@ -133,7 +133,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'samuel.jpg',
+          imageName: 'samuel.jpeg',
         },
         {
           firstname: 'Théodore',
@@ -143,7 +143,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'theodore.jpg',
+          imageName: 'theodore.jpeg',
         },
         {
           firstname: 'Victor',
@@ -153,7 +153,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'victor.jpg',
+          imageName: 'victor.jpeg',
         },
         {
           firstname: 'Yoan',
@@ -163,7 +163,7 @@ const prisma = require('../src/prismaClient');
           isActif: true,
           password: null,
           kingdomRole: '',
-          imageName: 'yoann.jpg',
+          imageName: 'yoann.jpeg',
         },
       ].map((elmt) => {
         return prisma.family.create({ data: elmt });
@@ -186,8 +186,8 @@ const prisma = require('../src/prismaClient');
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
           isVisitable: true,
-          latitude: 45.748112,
-          longitude: 4.860201,
+          latitude: 48.80309,
+          longitude: 2.08009,
           imageName: 'versailles.jpg',
         },
         {
@@ -228,7 +228,7 @@ const prisma = require('../src/prismaClient');
           isVisitable: true,
           latitude: 47.407831702,
           longitude: 0.984829394,
-          imageName: 'versailles.jpg',
+          imageName: 'amboise.jpg',
         },
       ].map((elmt) => {
         return prisma.realEstate.create({ data: elmt });
