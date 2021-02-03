@@ -1,0 +1,17 @@
+{
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Dracula",
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always"
+}
