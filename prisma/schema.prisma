@@ -34,6 +34,7 @@ model admin {
 model realState {
   id          Int      @id @default(autoincrement())
   name        String   @unique
+  imageName   String
   description String
   longitude   Float
   latitude    Float
@@ -65,9 +66,9 @@ model family {
   firstname   String
   lastname    String
   imageName   String?
-  description String
-  isActif     Boolean
-  password    Boolean
+  description String?
+  isActif     Boolean    @default(true)
+  password    String?
   kingDomRole String
   realState   realState? @relation(fields: [realStateId], references: [id])
   realStateId Int?
