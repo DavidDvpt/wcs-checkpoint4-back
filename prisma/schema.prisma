@@ -68,6 +68,7 @@ model family {
   imageName    String?
   description  String?
   isActif      Boolean     @default(true)
+  login        String      @unique
   password     String?
   kingdomRole  String
   realEstate   realEstate? @relation(fields: [realEstateId], references: [id])

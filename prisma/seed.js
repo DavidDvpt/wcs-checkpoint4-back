@@ -11,6 +11,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'albmar',
           password: null,
           kingdomRole: '',
           imageName: 'albin.jpeg',
@@ -21,6 +22,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'aledra',
           password: null,
           kingdomRole: '',
           imageName: 'alexandre.jpeg',
@@ -31,6 +33,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'antver',
           password: null,
           kingdomRole: '',
           imageName: 'anthony.jpeg',
@@ -41,6 +44,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'davmos',
           password: null,
           kingdomRole: '',
           imageName: 'david.jpeg',
@@ -51,6 +55,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'diacas',
           password: null,
           kingdomRole: '',
           imageName: 'diane.jpeg',
@@ -61,6 +66,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'lauglu',
           password: null,
           kingdomRole: '',
           imageName: 'laura.jpeg',
@@ -71,6 +77,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'linres',
           password: null,
           kingdomRole: '',
           imageName: 'linda.jpeg',
@@ -81,6 +88,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'malpiv',
           password: null,
           kingdomRole: '',
           imageName: 'malo.jpeg',
@@ -91,6 +99,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'nelchi',
           password: null,
           kingdomRole: '',
           imageName: 'nelly.jpeg',
@@ -101,6 +110,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'raplev',
           password: null,
           kingdomRole: '',
           imageName: 'raphael.jpeg',
@@ -111,6 +121,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'renfour',
           password: null,
           kingdomRole: '',
           imageName: 'renaud.jpeg',
@@ -121,6 +132,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'romzuc',
           password: null,
           kingdomRole: '',
           imageName: 'romain.jpeg',
@@ -131,6 +143,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'samdez',
           password: null,
           kingdomRole: '',
           imageName: 'samuel.jpeg',
@@ -141,6 +154,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'thelef',
           password: null,
           kingdomRole: '',
           imageName: 'theodore.jpeg',
@@ -151,6 +165,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'vicsal',
           password: null,
           kingdomRole: '',
           imageName: 'victor.jpeg',
@@ -161,6 +176,7 @@ const prisma = require('../src/prismaClient');
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
           isActif: true,
+          login: 'yoamar',
           password: null,
           kingdomRole: '',
           imageName: 'yoann.jpeg',

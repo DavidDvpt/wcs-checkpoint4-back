@@ -4,8 +4,11 @@ const family = require('./family');
 const realEstate = require('./realEstate');
 const goldBook = require('./goldBook');
 const visit = require('./visit');
+const auth = require('./auth');
 
 const router = express.Router();
+
+router.use('/auth', auth);
 
 router.use('/admin', admin);
 router.use('/family', family);
