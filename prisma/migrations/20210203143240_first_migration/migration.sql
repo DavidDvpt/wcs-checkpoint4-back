@@ -1,7 +1,7 @@
 -- CreateTable
 CREATE TABLE `goldBook` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nom` VARCHAR(191) NOT NULL,
+    `name` VARCHAR(191) NOT NULL,
     `message` VARCHAR(191) NOT NULL,
 
     PRIMARY KEY (`id`)
@@ -17,16 +17,17 @@ UNIQUE INDEX `admin.role_unique`(`role`),
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- CreateTable
-CREATE TABLE `realState` (
+CREATE TABLE `realEstate` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `name` VARCHAR(191) NOT NULL,
+    `imageName` VARCHAR(191) NOT NULL,
     `description` VARCHAR(191) NOT NULL,
     `longitude` DECIMAL(65, 30) NOT NULL,
     `latitude` DECIMAL(65, 30) NOT NULL,
     `isActif` BOOLEAN NOT NULL DEFAULT true,
-    `isVisible` BOOLEAN NOT NULL DEFAULT true,
+    `isVisitable` BOOLEAN NOT NULL DEFAULT true,
     `maxVisite` INTEGER NOT NULL DEFAULT 30,
-UNIQUE INDEX `realState.name_unique`(`name`),
+UNIQUE INDEX `realEstate.name_unique`(`name`),
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -38,7 +39,7 @@ CREATE TABLE `visit` (
     `quantity` INTEGER NOT NULL,
     `date` DATETIME(3) NOT NULL,
     `hour` INTEGER NOT NULL,
-    `realStateId` INTEGER,
+    `realEstateId` INTEGER,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
@@ -49,21 +50,21 @@ CREATE TABLE `family` (
     `firstname` VARCHAR(191) NOT NULL,
     `lastname` VARCHAR(191) NOT NULL,
     `imageName` VARCHAR(191),
-    `description` VARCHAR(191) NOT NULL,
-    `isActif` BOOLEAN NOT NULL,
-    `password` BOOLEAN NOT NULL,
-    `kingDomRole` VARCHAR(191) NOT NULL,
-    `realStateId` INTEGER,
+    `description` VARCHAR(191),
+    `isActif` BOOLEAN NOT NULL DEFAULT true,
+    `password` VARCHAR(191),
+    `kingdomRole` VARCHAR(191) NOT NULL,
+    `realEstateId` INTEGER,
     `adminId` INTEGER,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `visit` ADD FOREIGN KEY (`realStateId`) REFERENCES `realState`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `visit` ADD FOREIGN KEY (`realEstateId`) REFERENCES `realEstate`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `family` ADD FOREIGN KEY (`realStateId`) REFERENCES `realState`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+ALTER TABLE `family` ADD FOREIGN KEY (`realEstateId`) REFERENCES `realEstate`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE `family` ADD FOREIGN KEY (`adminId`) REFERENCES `admin`(`id`) ON DELETE SET NULL ON UPDATE CASCADE;

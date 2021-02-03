@@ -234,6 +234,94 @@ const prisma = require('../src/prismaClient');
         return prisma.realEstate.create({ data: elmt });
       })
     );
+
+    // ****** goldBook ******
+    await Promise.all(
+      [
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+        {
+          name: 'Jean Valjean',
+          message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis rutrum arcu sit amet enim hendrerit, vel pulvinar elit molestie. Donec gravida vitae erat ut molestie.',
+        },
+      ].map((elmt) => {
+        return prisma.goldBook.create({ data: elmt });
+      })
+    );
   } catch (error) {
     throw new Error(error);
   }
