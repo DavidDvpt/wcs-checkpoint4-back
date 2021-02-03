@@ -81,8 +81,10 @@ router.post('/', async (req, res, next) => {
         id: parseInt(id, 10),
       },
     });
-    res.status(200).json(results);
+    res.status(204).json(results);
   } catch (error) {
     next(error);
   }
 });
+
+module.exports = router;

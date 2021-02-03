@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) => {
     let results;
     if (limit !== '') {
       results = await prisma.goldBook.findMany({
-        take: 10,
+        take: parseInt(limit, 10),
         orderBy: {
           id: 'desc',
         },
@@ -47,11 +47,12 @@ router.get('/:id', async (req, res, next) => {
  * POST /api/v1/goldBook
  */
 router.post('/', async (req, res, next) => {
-  const { role } = req.body;
+  const { name, description } = req.body;
   try {
     const results = await prisma.goldBook.create({
       data: {
-        role,
+        name,
+        description,
       },
     });
     res.status(201).json(results);
@@ -63,16 +64,18 @@ router.post('/', async (req, res, next) => {
 /**
  * POST /api/v1/goldBook/:id
  */
-router.post('/', async (req, res, next) => {
+router.put('/', async (req, res, next) => {
   const { id } = req.params;
-  const { role } = req.body;
+  const { name, description } = req.body;
+
   try {
     const results = await prisma.goldBook.update({
       where: {
         id: parseInt(id, 10),
       },
       data: {
-        role,
+        name,
+        description,
       },
     });
     res.status(200).json(results);
@@ -84,7 +87,7 @@ router.post('/', async (req, res, next) => {
 /**
  * DELETE /api/v1/goldBook/:id
  */
-router.post('/', async (req, res, next) => {
+router.delete('/', async (req, res, next) => {
   const { id } = req.params;
   try {
     const results = await prisma.goldBook.delete({
@@ -92,8 +95,10 @@ router.post('/', async (req, res, next) => {
         id: parseInt(id, 10),
       },
     });
-    res.status(200).json(results);
+    res.status(204).json(results);
   } catch (error) {
     next(error);
   }
 });
+
+module.exports = router;
