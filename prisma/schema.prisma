@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+//*******************************************
+//* goldBook Table
+//*******************************************
+model goldBook {
+  id      Int    @id @default(autoincrement())
+  nom     String
+  message String
+}
+
+//*******************************************
+//* admin Table
+//*******************************************
+model admin {
+  id     Int      @id @default(autoincrement())
+  role   String   @unique
+  family family[]
+}
+
+//*******************************************
+//* realState Table
+//*******************************************
+model realState {
+  id          Int      @id @default(autoincrement())
+  name        String   @unique
+  description String
+  longitude   Float
+  latitude    Float
+  isActif     Boolean  @default(true)
+  isVisible   Boolean  @default(true)
+  maxVisite   Int      @default(30)
+  visit       visit[]
+  family      family[]
+}
+
+//*******************************************
+//* visit Table
+//*******************************************
+model visit {
+  id          Int        @id @default(autoincrement())
+  firstname   String
+  quantity    Int
+  date        DateTime
+  hour        Int
+  realState   realState? @relation(fields: [realStateId], references: [id])
+  realStateId Int?
+}
+
+//*******************************************
+//* family Table
+//*******************************************
+model family {
+  id          Int        @id @default(autoincrement())
+  firstname   String
+  lastname    String
+  imageName   String?
+  description String
+  isActif     Boolean
+  password    Boolean
+  kingDomRole String
+  realState   realState? @relation(fields: [realStateId], references: [id])
+  realStateId Int?
+  admin       admin?     @relation(fields: [adminId], references: [id])
+  adminId     Int?
+}
