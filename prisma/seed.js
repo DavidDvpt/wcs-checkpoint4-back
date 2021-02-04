@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const prisma = require('../src/prismaClient');
 const { hashPassword } = require('../src/util');
 
@@ -470,6 +471,7 @@ const { hashPassword } = require('../src/util');
   }
 })()
   .then(() => {
+    // eslint-disable-next-line no-console
     console.log('ALL SEEDS FOR PROD DONE !');
   })
   .catch((e) => console.error(e))
