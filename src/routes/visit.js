@@ -36,11 +36,20 @@ router.get('/:id', async (req, res, next) => {
  * POST /api/v1/visit
  */
 router.post('/', async (req, res, next) => {
-  const { role } = req.body;
+  const { firstname, quantity, date, hour, realEstateId } = req.body;
   try {
     const results = await prisma.visit.create({
       data: {
-        role,
+        firstname,
+        quantity: parseInt(quantity, 10),
+        date: new Date(date),
+        hour,
+        realEstateId: parseInt(realEstateId, 10),
+        // realEstate: {
+        //   connect: {
+        //     id: parseInt(realEstateId, 10),
+        //   },
+        // },
       },
     });
     res.status(201).json(results);

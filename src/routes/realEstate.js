@@ -8,7 +8,11 @@ const router = express.Router();
  */
 router.get('/', async (req, res, next) => {
   try {
-    const results = await prisma.realEstate.findMany();
+    const results = await prisma.realEstate.findMany({
+      include: {
+        family: true,
+      },
+    });
     res.status(200).json(results);
   } catch (error) {
     next(error);
@@ -20,12 +24,20 @@ router.get('/', async (req, res, next) => {
  */
 router.get('/:id', async (req, res, next) => {
   const { id } = req.params;
+  const { selectedDate = '' } = req.query;
+  let results;
   try {
-    const results = await prisma.realEstate.findUnique({
-      where: {
-        id: parseInt(id, 10),
-      },
-    });
+    if (selectedDate !== '') {
+      results = await prisma.$queryRaw(
+        `SELECT SUM(v.quantity) AS total FROM realEstate re JOIN visit v ON v.realEstateId = re.id WHERE v.date = DATE('${selectedDate}') AND re.id = ${id}`
+      );
+    } else {
+      results = await prisma.realEstate.findUnique({
+        where: {
+          id: parseInt(id, 10),
+        },
+      });
+    }
     res.status(200).json(results);
   } catch (error) {
     next(error);
@@ -68,7 +80,7 @@ router.post('/', async (req, res, next) => {
 /**
  * PUT /api/v1/realEstate/:id
  */
-router.put('/', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   const { id } = req.params;
   const {
     name,

@@ -424,6 +424,47 @@ const { hashPassword } = require('../src/util');
         return prisma.goldBook.create({ data: elmt });
       })
     );
+
+    // ****** admin ******
+    await Promise.all(
+      [
+        {
+          firstname: 'dupont',
+          quantity: 7,
+          date: new Date('2021-02-03'),
+          hour: '15',
+          realEstate: {
+            connect: {
+              id: 1,
+            },
+          },
+        },
+        {
+          firstname: 'dupqsdqnt',
+          quantity: 4,
+          date: new Date('2021-02-04'),
+          hour: '11',
+          realEstate: {
+            connect: {
+              id: 1,
+            },
+          },
+        },
+        {
+          firstname: 'dupondddt',
+          quantity: 5,
+          date: new Date('2021-02-04'),
+          hour: '17',
+          realEstate: {
+            connect: {
+              id: 1,
+            },
+          },
+        },
+      ].map((elmt) => {
+        return prisma.visit.create({ data: elmt });
+      })
+    );
   } catch (error) {
     throw new Error(error);
   }
