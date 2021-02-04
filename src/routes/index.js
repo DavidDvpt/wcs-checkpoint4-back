@@ -1,5 +1,6 @@
 const express = require('express');
 const admin = require('./admin');
+const adminRoutes = require('./adminRoutes');
 const family = require('./family');
 const realEstate = require('./realEstate');
 const goldBook = require('./goldBook');
@@ -15,5 +16,7 @@ router.use('/family', family);
 router.use('/realEstate', realEstate);
 router.use('/goldBook', goldBook);
 router.use('/visit', visit);
+
+router.use('/adminRoutes', adminRoutes);
 
 module.exports = router;

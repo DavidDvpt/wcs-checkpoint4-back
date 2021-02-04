@@ -15,11 +15,15 @@ router.post('/', async (req, res, next) => {
       where: {
         login,
       },
+      include: {
+        realEstate: true,
+        admin: true,
+      },
     });
 
     // if no login found => 401
     if (!family) {
-      res.status(401);
+      res.status(401).json('invalid user');
       throw new Error('User does not exists');
     }
 
@@ -28,13 +32,13 @@ router.post('/', async (req, res, next) => {
 
     // if bad password => 401
     if (!isValid) {
-      res.status(401);
+      res.status(401).json({ err: 'invalid password' });
       throw new Error('Invalid password');
     }
 
     // check role
     if (!family.admin.role) {
-      res.status(401);
+      res.status(401).json('invalid role');
       throw new Error('no role for this user');
     }
 

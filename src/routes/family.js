@@ -8,7 +8,12 @@ const router = express.Router();
  */
 router.get('/', async (req, res, next) => {
   try {
-    const results = await prisma.family.findMany();
+    const results = await prisma.family.findMany({
+      include: {
+        realEstate: true,
+        admin: true,
+      },
+    });
     res.status(200).json(results);
   } catch (error) {
     next(error);
